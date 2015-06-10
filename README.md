@@ -17,7 +17,7 @@ We use this test to get a sense of your coding style and to how you creatively s
 This project should take approximately 5-15 hours to complete. To work on the project:
 
 - Fork and clone the repo.
-- Use the Promise-based data source provided in the `src/data/` folder to populate the interface.
+- Use the Promise-based data source provided in the `lib/data/` folder to populate the interface you create.
 - Your application should (and need only) be compatible with the latest version of Google Chrome.
 - You may use any framework or library to help you build the interface.
 - You shouldn't have to build any server-side component to complete the project.
@@ -28,16 +28,64 @@ If you've tried AltspaceVR, you'll have seen our directory of "spaces" which use
 
 The interface should support typical CRUD operations for spaces, including editing its various fields, and should allow an administrator to restrict a space to a specific list of users.
 
+Take a look at the `example/` folder for a working example. You should be able to load it with a simple HTTP server. The example is not very pretty. Try to do a better job of styling the interface. Also feel free to structure the UI as you like. You do not have to replicate the working example, as long as you meet the functional requirements. 
+
+The requirements do not call for any form/model validation but feel free to add validation if you can.
+
+The `Data.js` file provided in the `lib/data/` folder implements a Promise-based data store which stores and retrieves simple JavaScript objects representing Users and Spaces. You should not have to modify the data store (at least for the Part 1 of the project) but you may have to wrap it with a shim, depending on what framework you choose.
+
+```
+Data
+    .Users
+        .getAll()
+        .getById(Integer id)
+        .updateById(Integer id)
+        .create(Object data)
+        .deleteById(Integer id)
+    .Spaces
+        .getAll()
+        .getById(Integer id)
+        .updateById(Integer id)
+        .create(Object data)
+        .deleteById(Integer id)
+```
+
+All of the stores' functions return Promises which resolve to an array (in the case of `getAll`) or a single object that you've retrieved, updated or created. The `deleteById` function also returns a Promise but it does not resolve to a value.
+
+Users and Spaces have the following schema:
+
+```
+User
+    Integer id
+    String email
+    String first_name
+    String last_name
+    Boolean admin
+Space
+    Integer id
+    String title
+    String description
+    Boolean welcome
+    Boolean private
+    Boolean featured
+    Integer created_by
+    Array<Integer> members 
+```
+
+The `admin` flag determines if a User is an admin or not. The `welcome` flag determines if a Space is designated the "welcome" space that users first visit when they enter Altspace. The `created_by` field is the `id` of the user that created the space and the `members` field is an array of User `id`s for users who are allowed to enter the space or `null` if there is no restriction. It is up to you to load the corresponding User objects by `id`.
+
+The data store comes pre-loaded with data which you can see in the `lib/data/db.json` file.
+
 # Part 2 - Enhancements (5-10 hours)
 
 Now that you have a working admin interface, enhance it with improvements that showcase your skills and creativity. This is the open ended part of the project, and is your chance to blow us away! 
 
 Some potential ideas:
 
-- Make it easier to perform bulk operations (deletes, resets, etc) 
+- Make it easier to perform bulk operations (setting flags, deletes, etc) 
 - Add a search function or a tagging function so that spaces are easier to manage and organize.
 - Add a visualization the stats for the spaces (number of users, number of visits, etc)
-- Anything you want! Got some new UX technique or library that you want to try? Use this as an excuse! Don't feel limited by the scope of part 1.
+- Anything you want! Got some new UX technique or library that you want to try? Use this as an excuse! Don't feel limited by the scope of Part 1.
 
 ## Deliverable
 
