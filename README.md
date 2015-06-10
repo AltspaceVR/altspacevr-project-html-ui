@@ -26,9 +26,14 @@ This project should take approximately 5-15 hours to complete. To work on the pr
 
 If you've tried AltspaceVR, you'll have seen our directory of "spaces" which users can visit and interact in. Admins can spawn new spaces and manage them in various ways. Create an interface that allows admins to view and edit spaces (their environments, titles, descriptions and user restrictions).
 
-The interface should support typical CRUD operations for spaces, including editing its various fields, and should allow an administrator to restrict a space to a specific list of users.
+Take a look at the `example/` folder for a working example. You should be able to load it with a simple HTTP server or view it on our [github.io site](https://altspacevr.github.io/altspacevr-project-html-ui/example). The example is not very pretty. Try to do a better job of styling the interface to show off your CSS skills. Also feel free to structure the UI as you like. You do not have to replicate the working example, as long as you meet the functional requirements listed below. 
 
-Take a look at the `example/` folder for a working example. You should be able to load it with a simple HTTP server or view it on our [github.io](https://altspacevr.github.io/altspacevr-project-html-ui/example). The example is not very pretty. Try to do a better job of styling the interface. Also feel free to structure the UI as you like. You do not have to replicate the working example, as long as you meet the functional requirements. 
+- The interface should list existing spaces, displaying their details.
+- You should be able to edit any of the spacese in the list.
+- The edit form should allow you to edit all of the fields associated with a space (see below) except for the "created by" field, which should default to the admin user for this project.
+- The editor fields should have appropriate input types. E.g. Boolean values should be checkboxes and the list of members in a space should allow you to select any of the existing users in the data store.
+- You should also be able to create and delete spaces.
+- The changes you make to spaces should be persisted to the data store through the provided API.
 
 The requirements do not call for any form/model validation but feel free to add validation if you can.
 
