@@ -1,0 +1,57 @@
+{
+	"User": {
+		"1": {
+			"id": 1,
+			"email": "admin@altvr.com",
+			"first_name": "Admin",
+			"last_name": "Istrator",
+			"admin": true
+		},
+		"2": {
+			"id": 2,
+			"email": "jane@altvr.com",
+			"first_name": "Jane",
+			"last_name": "Doe",
+			"admin": false
+		},
+		"3": {
+			"id": 3,
+			"email": "john@altvr.com",
+			"first_name": "John",
+			"last_name": "Doe",
+			"admin": false
+		}
+	},
+    "Space": {
+        "1": {
+            "id": 1,
+			"title": "Welcome Space",
+			"description": "Welcome to Altspace! Use this space to get acquainted with the interface",
+			"welcome": true,
+			"private": false,
+			"featured": false,
+			"created_by": 1,
+			"members": null
+        },
+        "2": {
+            "id": 2,
+			"title": "Meeting Room",
+			"description": "Use this room to hold meetings in!",
+			"welcome": false,
+			"private": false,
+			"featured": true,
+			"created_by": 1,
+			"members": null
+        },
+        "3": {
+            "id": 3,
+			"title": "Private Space",
+			"description": "What happens in Altspace, stays in Altspace",
+			"welcome": false,
+			"private": true,
+			"featured": false,
+			"created_by": 1,
+			"members": [1, 2]
+        }
+    }
+}
