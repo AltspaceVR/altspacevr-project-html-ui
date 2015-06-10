@@ -39,13 +39,13 @@ Data
     .Users
         .getAll()
         .getById(Number id)
-        .updateById(Number id)
+        .updateById(Number id, Object data)
         .create(Object data)
         .deleteById(Number id)
     .Spaces
         .getAll()
         .getById(Number id)
-        .updateById(Number id)
+        .updateById(Number id, Object data)
         .create(Object data)
         .deleteById(Number id)
 ```
