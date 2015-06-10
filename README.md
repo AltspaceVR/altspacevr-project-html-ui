@@ -28,48 +28,48 @@ If you've tried AltspaceVR, you'll have seen our directory of "spaces" which use
 
 The interface should support typical CRUD operations for spaces, including editing its various fields, and should allow an administrator to restrict a space to a specific list of users.
 
-Take a look at the `example/` folder for a working example. You should be able to load it with a simple HTTP server. The example is not very pretty. Try to do a better job of styling the interface. Also feel free to structure the UI as you like. You do not have to replicate the working example, as long as you meet the functional requirements. 
+Take a look at the `example/` folder for a working example. You should be able to load it with a simple HTTP server or view it on our [github.io](https://altspacevr.github.io/altspacevr-project-html-ui/example). The example is not very pretty. Try to do a better job of styling the interface. Also feel free to structure the UI as you like. You do not have to replicate the working example, as long as you meet the functional requirements. 
 
 The requirements do not call for any form/model validation but feel free to add validation if you can.
 
 The `Data.js` file provided in the `lib/data/` folder implements a Promise-based data store which stores and retrieves simple JavaScript objects representing Users and Spaces. You should not have to modify the data store (at least for the Part 1 of the project) but you may have to wrap it with a shim, depending on what framework you choose.
 
-```
+```js
 Data
     .Users
         .getAll()
-        .getById(Integer id)
-        .updateById(Integer id)
+        .getById(Number id)
+        .updateById(Number id)
         .create(Object data)
-        .deleteById(Integer id)
+        .deleteById(Number id)
     .Spaces
         .getAll()
-        .getById(Integer id)
-        .updateById(Integer id)
+        .getById(Number id)
+        .updateById(Number id)
         .create(Object data)
-        .deleteById(Integer id)
+        .deleteById(Number id)
 ```
 
 All of the stores' functions return Promises which resolve to an array (in the case of `getAll`) or a single object that you've retrieved, updated or created. The `deleteById` function also returns a Promise but it does not resolve to a value.
 
 Users and Spaces have the following schema:
 
-```
+```js
 User
-    Integer id
+    Number id
     String email
     String first_name
     String last_name
     Boolean admin
 Space
-    Integer id
+    Number id
     String title
     String description
     Boolean welcome
     Boolean private
     Boolean featured
-    Integer created_by
-    Array<Integer> members 
+    Number created_by
+    Array members 
 ```
 
 The `admin` flag determines if a User is an admin or not. The `welcome` flag determines if a Space is designated the "welcome" space that users first visit when they enter Altspace. The `created_by` field is the `id` of the user that created the space and the `members` field is an array of User `id`s for users who are allowed to enter the space or `null` if there is no restriction. It is up to you to load the corresponding User objects by `id`.
