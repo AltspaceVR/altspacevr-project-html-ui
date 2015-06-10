@@ -22,9 +22,9 @@
 			"admin": false
 		}
 	},
-    "Space": {
-        "1": {
-            "id": 1,
+	"Space": {
+		"1": {
+			"id": 1,
 			"title": "Welcome Space",
 			"description": "Welcome to Altspace! Use this space to get acquainted with the interface",
 			"welcome": true,
@@ -32,9 +32,9 @@
 			"featured": false,
 			"created_by": 1,
 			"members": null
-        },
-        "2": {
-            "id": 2,
+		},
+		"2": {
+			"id": 2,
 			"title": "Meeting Room",
 			"description": "Use this room to hold meetings in!",
 			"welcome": false,
@@ -42,9 +42,9 @@
 			"featured": true,
 			"created_by": 1,
 			"members": null
-        },
-        "3": {
-            "id": 3,
+		},
+		"3": {
+			"id": 3,
 			"title": "Private Space",
 			"description": "What happens in Altspace, stays in Altspace",
 			"welcome": false,
@@ -52,6 +52,6 @@
 			"featured": false,
 			"created_by": 1,
 			"members": [1, 2]
-        }
-    }
+		}
+	}
 }
