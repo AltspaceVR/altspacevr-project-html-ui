@@ -14,7 +14,7 @@ We use this test to get a sense of your coding style and to how you creatively s
 - Do the enhancements implemented work well?
 - Are the enhancements creative, challenging to implement, and just plain cool?
 
-This project should take approximately 5-15 hours to complete. To work on the project:
+To work on the project:
 
 - Fork and clone the repo.
 - Use the Promise-based data source provided in the `lib/data/` folder to populate the interface you create.
@@ -22,7 +22,7 @@ This project should take approximately 5-15 hours to complete. To work on the pr
 - You may use any framework or library to help you build the interface.
 - You shouldn't have to build any server-side component to complete the project.
 
-# Part 1 - Admin interface (3-5 hours)
+# Part 1 - Admin interface
 
 If you've tried AltspaceVR, you'll have seen our directory of "spaces" which users can visit and interact in. Admins can spawn new spaces and manage them in various ways. Create an interface that allows admins to view and edit spaces (their environments, titles, descriptions and user restrictions).
 
@@ -81,7 +81,7 @@ The `admin` flag determines if a User is an admin or not. The `welcome` flag det
 
 The data store comes pre-loaded with data which you can see in the `lib/data/db.json` file.
 
-# Part 2 - Enhancements (5-10 hours)
+# Part 2 - Enhancements
 
 Now that you have a working admin interface, enhance it with improvements that showcase your skills and creativity. This is the open ended part of the project, and is your chance to blow us away! 
 
