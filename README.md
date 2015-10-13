@@ -29,7 +29,7 @@ If you've tried AltspaceVR, you'll have seen our directory of "spaces" which use
 Take a look at the `example/` folder for a working example. You should be able to load it with a simple HTTP server or view it on our [github.io site](https://altspacevr.github.io/altspacevr-project-html-ui/example). The example is not very pretty. Try to do a better job of styling the interface to show off your CSS skills. Also feel free to structure the UI as you like. You do not have to replicate the working example, as long as you meet the functional requirements listed below. 
 
 - The interface should list existing spaces, displaying their details.
-- You should be able to edit any of the spacese in the list.
+- You should be able to edit any of the spaces in the list.
 - The edit form should allow you to edit all of the fields associated with a space (see below) except for the "created by" field, which should default to the admin user for this project.
 - The editor fields should have appropriate input types. E.g. Boolean values should be checkboxes and the list of members in a space should allow you to select any of the existing users in the data store.
 - You should also be able to create and delete spaces.
@@ -89,7 +89,7 @@ Some potential ideas:
 
 - Make it easier to perform bulk operations (setting flags, deletes, etc) 
 - Add a search function or a tagging function so that spaces are easier to manage and organize.
-- Add a visualization the stats for the spaces (number of users, number of visits, etc)
+- Add stats and visualizations to the spaces (number of users, number of visits, etc)
 - Anything you want! Got some new UX technique or library that you want to try? Use this as an excuse! Don't feel limited by the scope of Part 1.
 
 ## Deliverable
